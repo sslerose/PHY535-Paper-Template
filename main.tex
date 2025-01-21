@@ -1,0 +1,72 @@
+\documentclass[reprint, aps, pra, nofootinbib, floatfix]{customrevtex}   % Implement custom class based on REVTeX
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Change numbering to bottom center
+\makeatletter
+\def\ps@article{%
+  \def\@oddfoot{\hfil\normalsize\thepage\hfil}  % Center page number at bottom
+  \def\@evenfoot{\hfil\normalsize\thepage\hfil}  % Same for even pages
+  \let\@oddhead\@empty  % Remove header from odd pages
+  \let\@evenhead\@empty % Remove header from even pages
+}
+\pagestyle{article}
+\makeatother
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Input packages and commands
+% and set bibliography style
+\input{packages}
+\input{commands}
+\bibliographystyle{apsrev4-2}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Easy-change commands for affiliations
+\newcommand{\projTitle}{Project 1}      % Title goes here
+\newcommand{\name}{John Doe}            % Name goes here
+\newcommand{\duedate}{---, 2025}        % Due date goes here
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Title and affiliations
+\title{\projTitle}
+\author{\normalsize\name}
+    \affiliation{\normalsize Department of Physics \& Astronomy\\University of Kentucky\\ \duedate}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%
+% Abstract
+\begin{abstract}
+\normalsize
+A research paper begins with a short abstract containing a summary of the aims, the methods, and the results of the investigation. Your paper’s abstract should therefore contain a clear statement of the overall nature of your project, and include a summary of how the work was done. You might write, for example: We have determined the elementary unit of electrical charge, e, by measuring the terminal speed of ten charged oil drops in a uniform electric field. An abstract should also contain your estimate of the true value of the measured quantity and its error – assuming you have only one or two such values to report. For example, you could write: We find the charge of the electron to be $\SI{-1.73(22)e-19}{\coulomb}$. Note that only 2 significant figures are given in the error, and the least significant digit (LSD) of the error corresponds to the LSD of the quoted mean value.
+\end{abstract}
+%%%%%%%%%%%%%%%%%%%%%%
+
+
+\maketitle   % abstract is include in 'title', so \maketitle command is listed here
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Commands to input sections of paper.
+% DO NOT write content in this area, use
+% the tex files in the 'section' folder
+
+\input{sections/introduction}
+\input{sections/theory}
+\input{sections/experiment}
+\input{sections/results}
+\input{sections/conclusion}
+\input{sections/appendix}
+
+\bibliography{ref}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\end{document}
