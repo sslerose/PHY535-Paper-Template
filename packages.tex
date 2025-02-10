@@ -1,7 +1,7 @@
 %%%%%%%%%%%%%%
 % Page Style %
 %%%%%%%%%%%%%%
-\usepackage[top=0.7in,bottom=1.15in,left=0.7in,right=0.7in]{geometry} % Setting margins
+\usepackage[top=0.7in,bottom=1.1in,left=0.7in,right=0.7in]{geometry} % Setting margins
 \usepackage{hyperref}               % Permit clickable web links
 \usepackage{enumitem}               % Better enumerate environment
 \usepackage{multirow, booktabs}     % Better tabular commands
@@ -12,8 +12,9 @@
 %%%%%%%%
 \usepackage{physics}                % Better math symbols common to physics
 \usepackage{siunitx}                % Easy SI unit expressions
-    \sisetup{separate-uncertainty=true} % Use plus-minus form of uncertainty
+    %\sisetup{separate-uncertainty=true} % Use plus-minus form of uncertainty
     \sisetup{per-mode = symbol}         % Use "/" instead of "^{-1}" for inverse units
+    \sisetup{inter-unit-product=\ensuremath{{}\cdot{}}} % Use center dot for multi. units
 \usepackage{mathtools}              % Beautify math and add some useful commands
 \usepackage{bm}
 

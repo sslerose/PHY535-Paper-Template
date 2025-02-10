@@ -53,3 +53,5 @@
 \renewcommand\LARGE{\@setfontsize\LARGE{20}{24}}
 \renewcommand\huge{\@setfontsize\huge{24}{28}}
 \renewcommand\Huge{\@setfontsize\Huge{28}{33}}
+
+\setlength\parindent{2em}
